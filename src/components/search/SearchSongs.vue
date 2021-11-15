@@ -1,27 +1,25 @@
 <template>
-    <div class="search-songs">
-       <album-content :songList="listOfSongs"></album-content>
-    </div>
+  <div class="search-songs">
+    <album-content :songList="listOfSongs"></album-content>
+  </div>
 </template>
 <script>
-import {mapGetters} from "vuex";
-import {mixin} from "../../mixins";
-import AlbumContent from "../AlbumContent";
+import { mapGetters } from 'vuex'
+import { mixin } from '../../mixins'
+import AlbumContent from '../AlbumContent'
 
 export default {
-    name: 'search-songs',
-    components:{
-        AlbumContent
-    },
-    mixins: [mixin],
-    computed:{
-        ...mapGetters([
-            'listOfSongs'
-        ])
-    },
-    mounted() {
-        this.getSong();
-    }
+  name: 'search-songs',
+  components: {
+    AlbumContent
+  },
+  mixins: [mixin],
+  computed: {
+    ...mapGetters(['listOfSongs'])
+  },
+  mounted () {
+    this.getSong()
+  }
 }
 </script>
 

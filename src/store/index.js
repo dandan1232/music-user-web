@@ -7,11 +7,11 @@ import song from './song'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-    modules: {
-        configure,
-        user,
-        song
-    }
+  modules: {
+    configure,
+    user,
+    song
+  }
 })
 
 export default store
